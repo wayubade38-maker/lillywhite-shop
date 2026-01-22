@@ -25,8 +25,8 @@ exports.handler = async (event) => {
       payment_method_types: ['card'],
       line_items,
       mode: 'payment',
-      success_url: 'https://your-site.netlify.app/success.html',
-      cancel_url: 'https://your-site.netlify.app/cart.html',
+      success_url: 'https://lillywhitefacilities.online/success.html',
+      cancel_url: 'https://lillywhitefacilities.online/cart.html',
     });
 
     return {
