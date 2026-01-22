@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Cleaning Service – LILLYWHITE FACILITIES LTD</title>
+  <meta name="description" content="Professional, eco-friendly cleaning services for homes and businesses in Gloucester and across the UK." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #1976d2;
+      --light-bg: #f0f9ff;
+      --dark: #2c3e50;
+      --gray: #6c757d;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--dark);
+      line-height: 1.7;
+      background-color: #fff;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--primary);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Header */
+    header {
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #0d47a1;
+    }
+
+    /* Main Content */
+    main {
+      padding: 3rem 0 2rem;
+      background-color: var(--light-bg);
+    }
+
+    .page-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2.2rem;
+      color: var(--primary);
+    }
+
+    .content {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .section {
+      margin-bottom: 1.8rem;
+    }
+
+    .section h2 {
+      margin-bottom: 0.8rem;
+      color: var(--primary);
+      font-size: 1.4rem;
+    }
+
+    .section p, .section ul {
+      margin-bottom: 1rem;
+    }
+
+    .section ul {
+      padding-left: 1.5rem;
+    }
+
+    .highlight {
+      background-color: #e3f2fd;
+      padding: 1.2rem;
+      border-radius: 8px;
+      margin: 1.2rem 0;
+      border-left: 4px solid var(--primary);
+    }
+
+    .btn-contact {
+      display: inline-block;
+      background-color: var(--primary);
+      color: white;
+      padding: 0.7rem 1.8rem;
+      border-radius: 30px;
+      font-weight: 600;
+      margin-top: 1rem;
+      transition: background-color 0.3s;
+    }
+
+    .btn-contact:hover {
+      background-color: #1565c0;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 2.5rem 0 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-section {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .footer-section h3 {
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      color: #90caf9;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-links a {
+      color: #bbdefb;
+      font-size: 0.95rem;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .contact-info {
+      line-height: 1.8;
+    }
+
+    .copyright {
+      text-align: center;
+      color: #aaa;
+      font-size: 0.9rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #444;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="logo">LILLYWHITE</a>
+<nav class="nav-links">
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="service.html">Service</a>
+  <a href="about.html">About</a>
+  <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+</nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container">
+    <h1 class="page-title">Our Cleaning Service</h1>
+
+    <div class="content">
+      <div class="section">
+        <p>At <strong>LILLYWHITE FACILITIES LTD</strong>, we offer professional, reliable, and **eco-friendly cleaning services** for homes and businesses across Gloucester and the wider UK.</p>
+        <p>Whether you need a one-off deep clean or regular maintenance, our trained team delivers exceptional results — using only safe, sustainable products.</p>
+      </div>
+
+      <div class="section">
+        <h2>🧼 What We Clean</h2>
+        <ul>
+          <li><strong>Homes:</strong> Kitchens, bathrooms, floors, windows, carpets, ovens</li>
+          <li><strong>Offices:</strong> Desks, meeting rooms, kitchens, restrooms, common areas</li>
+          <li><strong>Commercial spaces:</strong> Retail units, clinics, salons, warehouses</li>
+          <li><strong>Specialist services:</strong> End-of-tenancy, post-renovation, spring cleaning</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>✅ Why Choose Our Service?</h2>
+        <div class="highlight">
+          <p>🌿 <strong>100% Eco-Friendly Products</strong><br>
+          We use only biodegradable, non-toxic, plant-based cleaners — safe for children, pets, and the planet.</p>
+        </div>
+        <div class="highlight">
+          <p>🧽 <strong>Trained & Trusted Professionals</strong><br>
+          All staff are DBS-checked, uniformed, and fully insured.</p>
+        </div>
+        <div class="highlight">
+          <p>⏱️ <strong>Flexible & Reliable</strong><br>
+          Book online or by phone. We arrive on time, every time.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>✨ Quality Guarantee</h2>
+        <p>We don’t just clean — we care. Every job is inspected before completion. If you’re not 100% satisfied, we’ll return to fix it — at no extra cost.</p>
+      </div>
+
+      <div class="section">
+        <h2>📞 Ready to Book?</h2>
+        <p>Contact us today for a free quote or to schedule your cleaning:</p>
+        <p>
+          📧 <a href="mailto:info@lillywhitefacilities.shop">info@lillywhitefacilities.shop</a><br>
+          📞 +44 7365 594303
+        </p>
+        <a href="mailto:info@lillywhitefacilities.shop" class="btn-contact">Request a Quote</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <p>LILLYWHITE FACILITIES LTD supplies premium eco-friendly cleaning products across the UK, committed to sustainability and effectiveness.</p>
+          <div class="contact-info" style="margin-top: 1rem;">
+            <p>41 Brunswick Road<br>Gloucester, GL1 1JS</p>
+            <p>📞 +44 7365 594303</p>
+            <p>✉️ <a href="mailto:info@lillywhitefacilities.shop" style="color:#bbdefb;">info@lillywhitefacilities.shop</a></p>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Customer Service</h3>
+          <div class="footer-links">
+            <a href="shop.html">Shop Products</a>
+            <a href="service.html">Cleaning Service</a>
+            <a href="delivery.html">Delivery Info</a>
+            <a href="about.html">About Us</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <div class="footer-links">
+            <a href="terms.html">Terms of Service</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="returns.html">Returns Policy</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        &copy; 2026 LILLYWHITE FACILITIES LTD. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Counter Script -->
+  <script>
+    function updateCartCount() {
+      try {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 0), 0);
+        document.getElementById('cart-count').textContent = totalItems;
+      } catch (e) {
+        console.warn('Failed to parse cart');
+        document.getElementById('cart-count').textContent = '0';
+      }
+    }
+    document.addEventListener('DOMContentLoaded', updateCartCount);
+  </script>
+
+</body>
+</html>

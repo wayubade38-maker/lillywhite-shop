@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LILLYWHITE FACILITIES LTD – Eco-Friendly Cleaning Supplies</title>
+  <meta name="description" content="Premium eco-friendly cleaning products and professional cleaning services in the UK." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="icon" href="image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧼</text></svg>" />
+
+  <style>
+    /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #1976d2;
+      --light-bg: #f0f9ff;
+      --dark: #2c3e50;
+      --gray: #6c757d;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--dark);
+      line-height: 1.6;
+      background-color: #fff;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--primary);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* === HERO VIDEO HEADER === */
+    .hero-video-header {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-video-header video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+
+    .hero-video-header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      z-index: -1;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      padding: 0 1.5rem;
+      z-index: 2;
+    }
+
+    .hero-content h1 {
+      font-size: 3.2rem;
+      margin-bottom: 1.2rem;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    }
+
+    .hero-content p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--primary);
+      color: white;
+      padding: 0.9rem 2.2rem;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: background-color 0.3s;
+      text-shadow: none;
+    }
+
+    .btn:hover {
+      background-color: #1565c0;
+    }
+
+    /* Navigation after video */
+    header.nav-only {
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      color: var(--primary);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #0d47a1;
+    }
+
+    /* Features */
+    .features {
+      padding: 4rem 0;
+      background-color: var(--light-bg);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 2.2rem;
+      color: var(--primary);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .feature-card h3 {
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    /* Testimonials */
+    .testimonials {
+      padding: 4rem 0;
+      background-color: #e3f2fd;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .testimonial-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .testimonial-avatar {
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .testimonial-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-author {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    /* CTA */
+    .cta {
+      background-color: var(--primary);
+      color: white;
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta .btn {
+      background-color: white;
+      color: var(--primary);
+    }
+
+    .cta .btn:hover {
+      background-color: #f0f9ff;
+    }
+
+    /* How It Works */
+    .how-it-works {
+      padding: 4rem 0;
+      background-color: var(--light-bg);
+    }
+
+    .steps {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .step {
+      flex: 1;
+      min-width: 200px;
+      text-align: center;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .step-number {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      line-height: 40px;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 2.5rem 0 1.5rem;
+      margin-top: 4rem;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-section {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .footer-section h3 {
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      color: #90caf9;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-links a {
+      color: #bbdefb;
+      font-size: 0.95rem;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .contact-info {
+      line-height: 1.8;
+    }
+
+    .copyright {
+      text-align: center;
+      color: #aaa;
+      font-size: 0.9rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #444;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-content p {
+        font-size: 1.1rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .steps {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Video Header -->
+  <div class="hero-video-header">
+    <video autoplay muted loop playsinline>
+      <source src="videos/hero-demo.mp4" type="video/mp4">
+      <source src="videos/hero-demo.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+      <h1>Eco-Friendly Cleaning Solutions</h1>
+      <p>LILLYWHITE FACILITIES LTD provides premium, environmentally safe cleaning products and professional services across the UK.</p>
+      <a href="shop.html" class="btn">Shop Now</a>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="nav-only">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">LILLYWHITE</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="service.html">Service</a>
+        <a href="about.html">About</a>
+        <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="container">
+      <h2 class="section-title">Why Choose Us?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>🌿 100% Eco-Friendly</h3>
+          <p>Our products are made from biodegradable, non-toxic ingredients that are safe for your family and the planet.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🧼 Powerful & Effective</h3>
+          <p>Green doesn’t mean weak. Our formulas deliver professional-grade cleaning performance.</p>
+        </div>
+        <div class="feature-card">
+          <h3>♻️ Sustainable Packaging</h3>
+          <p>We use recyclable and minimal packaging to reduce waste and carbon footprint.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🚚 Free Delivery Over £30</h3>
+          <p>Order £30 or more and we’ll deliver it to your door — absolutely free!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="section-title">What Our Customers Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-avatar">
+            <img src="images/21.jpg" alt="Sarah T." />
+          </div>
+          <p class="testimonial-text">"Switched to Lillywhite last month — my kitchen has never been cleaner, and I feel good about what I’m using around my kids!"</p>
+          <p class="testimonial-author">— Sarah T., Gloucester</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-avatar">
+            <img src="images/22.jpg" alt="James R." />
+          </div>
+          <p class="testimonial-text">"As a small business owner, I needed reliable, green products. These work brilliantly and smell amazing!"</p>
+          <p class="testimonial-author">— James R., Cheltenham</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-avatar">
+            <img src="images/23.jpg" alt="Emma L." />
+          </div>
+          <p class="testimonial-text">"Fast delivery, excellent quality, and truly eco-friendly. Will definitely order again!"</p>
+          <p class="testimonial-author">— Emma L., Bristol</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Make the Switch?</h2>
+      <p>Explore our range of eco-cleaning supplies and order online today.</p>
+      <a href="shop.html" class="btn">Visit Our Shop</a>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <h2 class="section-title">How to Order in 3 Simple Steps</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Choose Products</h3>
+          <p>Browse our shop and add your favourite eco-friendly cleaners to the cart.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Go to Cart</h3>
+          <p>Review your items, adjust quantities, and click “Checkout”.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Pay Securely</h3>
+          <p>You’ll be redirected to Stripe for safe payment. After that, we handle delivery!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <!-- About Us -->
+        <div class="footer-section">
+          <p>LILLYWHITE FACILITIES LTD supplies premium eco-friendly cleaning products across the UK, committed to sustainability and effectiveness.</p>
+          <div class="contact-info" style="margin-top: 1rem;">
+            <p>41 Brunswick Road<br>Gloucester, GL1 1JS</p>
+            <p>📞 +44 7365 594303</p>
+            <p>✉️ <a href="mailto:info@lillywhitefacilities.shop" style="color:#bbdefb;">info@lillywhitefacilities.shop</a></p>
+          </div>
+        </div>
+
+        <!-- Customer Service -->
+        <div class="footer-section">
+          <h3>Customer Service</h3>
+          <div class="footer-links">
+            <a href="shop.html">Shop Products</a>
+            <a href="service.html">Cleaning Service</a>
+            <a href="delivery.html">Delivery Info</a>
+            <a href="about.html">About Us</a>
+          </div>
+        </div>
+
+        <!-- Legal -->
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <div class="footer-links">
+            <a href="terms.html">Terms of Service</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="returns.html">Returns Policy</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        &copy; 2026 LILLYWHITE FACILITIES LTD. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Counter Script -->
+  <script>
+    function updateCartCount() {
+      try {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 0), 0);
+        document.getElementById('cart-count').textContent = totalItems;
+      } catch (e) {
+        console.warn('Failed to parse cart from localStorage');
+        document.getElementById('cart-count').textContent = '0';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', updateCartCount);
+  </script>
+
+</body>
+</html>

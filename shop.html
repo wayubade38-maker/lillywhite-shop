@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop – LILLYWHITE FACILITIES LTD</title>
+  <meta name="description" content="Shop eco-friendly cleaning products. Safe, effective, and sustainable." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #1976d2;
+      --light-bg: #f0f9ff;
+      --dark: #2c3e50;
+      --gray: #6c757d;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--dark);
+      line-height: 1.6;
+      background-color: #fff;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--primary);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Header */
+    header {
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #0d47a1;
+    }
+
+    /* Main */
+    main {
+      padding: 3rem 0 4rem;
+      background-color: var(--light-bg);
+    }
+
+    .page-title {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      font-size: 2.4rem;
+      color: var(--primary);
+    }
+
+    /* Products Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 2.5rem;
+      justify-items: center;
+    }
+
+    .product-card {
+      width: 100%;
+      max-width: 280px;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-image {
+      width: 100%;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #e3f2fd;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 1.2rem;
+      text-align: center;
+    }
+
+    .product-info h3 {
+      margin-bottom: 0.4rem;
+      font-size: 1.2rem;
+      color: var(--dark);
+    }
+
+    .product-description {
+      font-size: 0.9rem;
+      color: var(--gray);
+      margin-bottom: 0.8rem;
+      line-height: 1.5;
+    }
+
+    .product-price {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .btn-add {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 100%;
+    }
+
+    .btn-add:hover {
+      background-color: #1565c0;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 2.5rem 0 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-section {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .footer-section h3 {
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      color: #90caf9;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-links a {
+      color: #bbdefb;
+      font-size: 0.95rem;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .contact-info {
+      line-height: 1.8;
+    }
+
+    .copyright {
+      text-align: center;
+      color: #aaa;
+      font-size: 0.9rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #444;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="logo">LILLYWHITE</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container">
+    <h1 class="page-title">Our Eco-Friendly Products</h1>
+
+    <div class="products-grid" id="products-container">
+      <!-- Products will be inserted here by JS -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <p>LILLYWHITE FACILITIES LTD supplies premium eco-friendly cleaning products across the UK, committed to sustainability and effectiveness.</p>
+          <div class="contact-info" style="margin-top: 1rem;">
+            <p>41 Brunswick Road<br>Gloucester, GL1 1JS</p>
+            <p>📞 +44 7365 594303</p>
+            <p>✉️ <a href="mailto:info@lillywhitefacilities.shop" style="color:#bbdefb;">info@lillywhitefacilities.shop</a></p>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Customer Service</h3>
+          <div class="footer-links">
+            <a href="shop.html">Shop Products</a>
+            <a href="index.html#how-it-works">How to Order</a>
+            <a href="#">Delivery Info</a>
+            <a href="about.html">About Us</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <div class="footer-links">
+            <a href="terms.html">Terms of Service</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="returns.html">Returns Policy</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        &copy; 2026 LILLYWHITE FACILITIES LTD. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Cart counter
+    function updateCartCount() {
+      try {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 0), 0);
+        document.getElementById('cart-count').textContent = totalItems;
+      } catch (e) {
+        console.warn('Failed to parse cart');
+        document.getElementById('cart-count').textContent = '0';
+      }
+    }
+
+    // Add to cart
+    function addToCart(product) {
+      try {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        const existingItem = cart.find(item => item.priceId === product.priceId);
+        if (existingItem) {
+          existingItem.quantity += 1;
+        } else {
+          cart.push({ ...product, quantity: 1 });
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        alert(`${product.name} added to cart!`);
+      } catch (e) {
+        console.error('Failed to add to cart', e);
+        alert('Error adding to cart. Please try again.');
+      }
+    }
+
+    // Product data — with descriptions
+    const products = [
+      {
+        priceId: 'price_1SsSF4GCifgUsouHYv4EPNgR',
+        name: 'OceanSaver EcoDrop Starter Collection',
+        image: 'images/20.jpg',
+        price: 14.99,
+        description: 'A clever "Just Add Water" cleaning system. This collection includes three durable, reusable trigger spray bottles and three concentrated EcoDrops (Kitchen, Bathroom, and All-Purpose). It provides a complete cleaning solution while taking up minimal storage space.'
+      },
+      {
+        priceId: 'price_1SsSDuGCifgUsouHTiBqhkH1',
+        name: 'Seep Eco Sponge Cloths (Bulk Pack of 12)',
+        image: 'images/19.jpg',
+        price: 17.50,
+        description: 'These super-absorbent, multi-purpose cloths are a sustainable alternative to traditional plastic sponges and paper towels. One cloth can absorb up to 15 times its own weight in liquid and is perfect for wiping down office desks and kitchen surfaces.'
+      },
+      {
+        priceId: 'price_1SsSCjGCifgUsouH2KF2Ef8e',
+        name: 'Bio-D Concentrated Washing Up Liquid (5 Litre Bulk)',
+        image: 'images/18.jpg',
+        price: 18.99,
+        description: 'These super-absorbent, multi-purpose cloths are a sustainable alternative to traditional plastic sponges and paper towels. One cloth can absorb up to 15 times its own weight in liquid and is perfect for wiping down office desks and kitchen surfaces.'
+      },
+      {
+        priceId: 'price_1SsSB1GCifgUsouHXyf03S5H',
+        name: 'Delphis Eco Glass & Stainless Steel Cleaner (750ml Twin Pack)',
+        image: 'images/17.jpg',
+        price: 11.99,
+        description: 'A high-performance, professional-grade cleaner specifically formulated to leave windows, mirrors, and stainless steel surfaces streak-free and sparkling. It effectively removes grease and finger marks without the use of harsh alcohols or ammonia.'
+      },
+
+      {
+        priceId: 'price_1SsRuqGCifgUsouHksquUx1G',
+        name: 'Method Antibac All-Purpose Bulk Refill (Case of 6 x 2L)',
+        image: 'images/16.jpg',
+        price: 48.99,
+        description: 'A case of large-format 2-litre refills for Method’s signature Wild Rhubarb or Lavender sanitising sprays.'
+      },
+      {
+        priceId: 'price_1SsRtOGCifgUsouH78Q9118F',
+        name: 'Seep "Whole Facility" Eco-Accessory Kit',
+        image: 'images/15.jpg',
+        price: 38.50,
+        description: 'A bulk pack of 20 compostable cellulose sponges, 10 bamboo microfibre cloths, and 5 loofah scouring pads.'
+      },
+      {
+        priceId: 'price_1SsRrOGCifgUsouHGZ3H2GmD',
+        name: 'Dr. Bronner’s Sal Suds Biodegradable Cleaner (1 Gallon)',
+        image: 'images/14.jpg',
+        price: 58.00,
+        description: 'A 3.8-litre (1 US Gallon) bottle of super-concentrated hard-surface cleaner. Very effective for pressure washing, mopping, and even heavy degreasing.'
+      },
+      {
+        priceId: 'price_1SsRp8GCifgUsouH2wnbR9hw',
+        name: 'OceanSaver Professional Refill Drops (Trade Box)',
+        image: 'images/13.jpg',
+        price: 69.99,
+        description: 'A bulk trade box containing 50 concentrated "drops" (pods). Available in variants like Kitchen Degreaser, Bathroom Descaler, and Glass Cleaner.'
+      },
+      {
+        priceId: 'price_1SsRncGCifgUsouHod1LZJ7Y',
+        name: 'Ecover Professional Techno Floor Soap (Case of 4 x 5L)',
+        image: 'images/12.jpg',
+        price: 50.50,
+        description: 'A bulk case containing 20 litres (4 x 5L) of linseed-oil-based floor soap. Perfect for cleaning and protecting porous floors like stone, tile, and wood.'
+      },
+      {
+        priceId: 'price_1SsRmNGCifgUsouHAiJJIz8v',
+        name: 'Bio-D Bulk All-Purpose Sanitiser (20 Litre)',
+        image: 'images/11.jpg',
+        price: 59.99,
+        description: 'A 20-litre industrial drum of concentrated all-purpose sanitiser. It is fragrance-free, hypoallergenic, and effective against 99.9% of bacteria (including E. coli and Salmonella).'
+      },
+      {
+        priceId: 'price_1SsRkwGCifgUsouHR49C7btH',
+        name: 'PVA Hygiene "Eco-Start" Sachet System',
+        image: 'images/10.jpg',
+        price: 26.99,
+        description: 'A pack of 40 water-soluble sachets (cleaning concentrates) plus 5 high-quality reusable trigger spray bottles. Just drop a sachet in water, shake, and clean.'
+      },
+      {
+        priceId: 'price_1SsRjhGCifgUsouHC3hfklKB',
+        name: 'Delphis Eco Professional Cleaning Bundle',
+        image: 'images/9.jpg',
+        price: 45.00,
+        description: 'A comprehensive set of professional-grade cleaners including Anti-Bacterial Sanitiser, Glass Cleaner, and Multi-Purpose Cleaner. All products are made from plant-based ingredients.'
+      },
+      {
+        priceId: 'price_1SsRgvGCifgUsouHi7Luee7N',
+        name: 'Truvox Hydromist Compact Carpet Extractor',
+        image: 'images/8.jpg',
+        price: 718.99,
+        description: 'An all-in-one spray extractor for effective carpet cleaning. It features a powerful brush head that lifts dirt from deep within the carpet pile and a high-suction vacuum that leaves carpets nearly dry after cleaning. Simple to use and very robust.'
+      },
+      {
+        priceId: 'price_1SsReoGCifgUsouH1q3nAgsV',
+        name: 'Karcher NT 40/1 Tact Te L Wet & Dry Vacuum',
+        image: 'images/7.jpg',
+        price: 689.50,
+        description: 'A heavy-duty vacuum cleaner with a fully automatic filter cleaning system (Tact). It includes a power tool socket with automatic start/stop and is designed for large amounts of fine dust and liquids. Very durable and easy to transport.'
+      },
+      {
+        priceId: 'price_1SsRe0GCifgUsouHbhC3PdM4',
+        name: 'Blueair Pro M Professional Air Purifier',
+        image: 'images/6.jpg',
+        price: 639.89,
+        description: 'A slim, medical-grade air purifier designed for medium-sized office spaces. It uses HEPASilent technology to remove 99.97% of airborne particles, including allergens, bacteria, and viruses. Its sleek, galvanized steel design fits any modern office interior.'
+      },
+      {
+        priceId: 'price_1SsRciGCifgUsouH4HsYpGlA',
+        name: 'Numatic RSB150NX Cordless Backpack Vacuum',
+        image: 'images/5.jpg',
+        price: 595.50,
+        description: 'A professional-grade, battery-powered backpack vacuum that provides total freedom of movement. It features the high-performance NX300 lithium battery technology, offering 80 minutes of continuous run time.'
+      },
+      {
+        priceId: 'price_1SsRbCGCifgUsouHaREDEj1y',
+        name: 'MOVA Z60 Ultra Professional Robot Vacuum & Mop',
+        image: 'images/4.jpg',
+        price: 1129.99,
+        description: 'An advanced autonomous cleaning robot with 12,000Pa suction power and AI-driven obstacle detection. It features a self-cleaning base station that washes and dries the mop pads with hot water.'
+      },
+      {
+        priceId: 'price_1SsRa0GCifgUsouHZ71A92IX',
+        name: 'Xline 45L X-Trolley Pure Water System Starter Package',
+        image: 'images/3.jpg',
+        price: 1050.50,
+        description: 'A portable water filtration trolley for professional window cleaning. It includes a 45-litre tank, a DI (De-ionisation) filter, a high-pressure pump, and a carbon fiber telescopic pole. Allows cleaning of windows and facades from the ground.'
+      },
+      {
+        priceId: 'price_1SsRYjGCifgUsouH4IUtw27N',
+        name: 'Numatic Nuclean 220NX Compact Cordless Scrubber Dryer',
+        image: 'images/2.jpg',
+        price: 1340.99,
+        description: 'A lightweight, battery-powered floor scrubber designed for tight spaces. It provides consistent cleaning results with high-performance NX300 lithium batteries, which are interchangeable with other Numatic equipment.'
+      },
+      {
+        priceId: 'price_1SsRWmGCifgUsouHqpFe5MwJ',
+        name: 'Matrix SV4 Commercial Steam and Vacuum Cleaner',
+        image: 'images/1.jpg',
+        price: 1290.50,
+        description: 'A high-performance 4.5 bar pressure steam cleaner with an integrated vacuum system. It uses dry steam to kill 99.9% of bacteria and remove grime from upholstery, hard floors, and kitchens. Made from durable stainless steel and features a continuous-fill boiler for uninterrupted use.'
+      }
+    ];
+
+    // Render products
+    function renderProducts() {
+      const container = document.getElementById('products-container');
+      container.innerHTML = products.map(product => `
+        <div class="product-card">
+          <div class="product-image">
+            <img src="${product.image}" alt="${product.name}" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <h3>${product.name}</h3>
+            <p class="product-description">${product.description}</p>
+            <div class="product-price">£${product.price.toFixed(2)}</div>
+            <button class="btn-add" onclick='addToCart(${JSON.stringify(product).replace(/'/g, "\\'")})'>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Init
+    document.addEventListener('DOMContentLoaded', () => {
+      updateCartCount();
+      renderProducts();
+    });
+  </script>
+
+</body>
+</html>
